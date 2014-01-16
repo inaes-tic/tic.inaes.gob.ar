@@ -7,7 +7,7 @@
 </video> 
 {%endmacro %}
 
-{% macro render_excerpt (res) %}       
+{% macro render_excerpt (res) %}
      {% refer to res.relative_deploy_path as post %}
           {{ post.excerpt|markdown|typogrify }}
           <p><a class="btn" href="/{{ res.url }}">Detalles &raquo;</a></p>
@@ -16,9 +16,10 @@
 {% macro render_blog_listing(walker) %}
   {% for res in walker %}
      <div class="span4">
-       <h2><a href="/{{ res.url }}">{{ res.meta.title }}</a></h2>        
+       <h2><a href="/{{ res.url }}">{{ res.meta.title }}</a></h2>
           <p><b>{{ res.meta.subtitle }}</b><p>
-       {{ render_excerpt (res) }}
+              {{ render_excerpt (res) }}
+
     </div>
   {% endfor %}
 {% endmacro %}
@@ -33,12 +34,13 @@
     </a>
     <div class="media-body">
     <header>
-     <h4>{{ res.meta.title }}
-          <small>{{ res.meta.subtitle }}</small></h4>
+     <h4><a href="/{{ res.url }}">{{ res.meta.title }}
+          <small>{{ res.meta.subtitle }}</small></a></h4>
      {{ render_excerpt (res) }}
-    </header>
-    </div>
-  </div>
+
+</header>
+</div>
+</div>
   {% endfor %}
 {% endmacro %}
 
