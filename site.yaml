@@ -66,12 +66,12 @@ meta:
 
 context:
     data:
-        site_url: http://tic.inaes.gob.ar
+        site_url: https://tic.inaes.gob.ar
         site_title: tic@inaes
         author:
             name: Niv Sardi
-            url: "http://tic.inaes.gob.ar"
-            sources: "http://github.com/inaes-tic/pagina"
+            url: "https://tic.inaes.gob.ar"
+            sources: "https://github.com/inaes-tic/pagina"
         twitter:
             handle: inaestic
         google_analytics_id: UA-XXXXX-YY
